@@ -101,3 +101,23 @@ if (isMobile) {
         stagger: .25,
     });
 }
+
+// Scroll to top button functionality
+const scrollTopBtn = document.getElementById('scrollTopBtn');
+const viewportHeight = window.innerHeight;
+
+window.addEventListener('scroll', () => {
+    if (window.pageYOffset >= viewportHeight) {
+        scrollTopBtn.classList.add('show');
+    } else {
+        scrollTopBtn.classList.remove('show');
+    }
+});
+
+scrollTopBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
