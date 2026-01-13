@@ -237,7 +237,7 @@ z-index: 7;
     visibility: hidden;
     transition: all 0.3s ease-in-out;
     z-index: 99;
-    box-shadow: 0 0 10px rgba(1, 238, 254, 0.5);
+    /* box-shadow: 0 0 10px rgba(1, 238, 254, 0.5); */
 }
 .scroll-top.show {
     opacity: 1;
