@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grid Template</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <style>
         body {
             background-color: rgb(65, 65, 66);
@@ -146,6 +147,32 @@
             height: 60px;
             background-color: rgb(158, 158, 0);
         }
+        .bg-success {
+            position: relative;
+        }
+        .bg-success::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100vw; 
+            width: 100vw;
+            height: 100%;
+            background-color: #198754;
+            z-index: -1;
+        }
+        .bg-danger {
+            position: relative;
+        }
+        .bg-danger::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: -100vw; 
+            width: 100vw;
+            height: 100%;
+            background-color: #dc3545;
+            z-index: -1;
+        }
     </style>
 </head>
 <body>
@@ -169,13 +196,24 @@
         <div class="template extra">EXTRA</div>
         <div class="template image">IMAGE</div>
     </div>
-    
     <div class="third-layout">
         <div class="template head">Header</div>
         <div class="template menu-1">Menu</div>
         <div class="template hero-main">Hero</div>
         <div class="template main-wrap">Main</div>
         <div class="template main-banner">Banner</div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="bg-success p-5">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur sunt vitae, beatae corrupti, quae at eaque harum quas amet assumenda excepturi perferendis doloremque aspernatur sapiente natus veniam quos facere voluptas. Lorem ipsum dolor sit amet consectetur adipisicing elit. Id nihil aut possimus earum! Labore consequuntur amet odit error! Laborum, natus dolor. Deleniti nesciunt animi hic reprehenderit at aliquam cupiditate dolorum autem, earum magnam modi, ea veniam quo enim placeat eaque libero laboriosam fugiat consequatur amet error quia velit quae! Unde, laborum vero saepe laboriosam incidunt commodi ea velit sed et recusandae, aut voluptatibus est corporis animi molestias earum perspiciatis ipsam debitis voluptate quam provident! Possimus iure laboriosam id corporis velit quae. Neque voluptates iusto dolorum numquam accusamus voluptas. Modi similique quam ducimus facere iusto voluptatum nulla magni aperiam, nemo, nesciunt corrupti, ut a? Amet harum eius suscipit placeat quae saepe, quibusdam consequuntur molestiae ea, beatae debitis deserunt corrupti. Alias cupiditate quibusdam illum repudiandae! Exercitationem pariatur quisquam excepturi quasi sapiente cumque tempora dolorem, earum doloremque minima iste voluptatum esse odio, magnam nisi debitis molestiae corrupti, soluta nesciunt nemo explicabo quo eligendi?</p>
+                </div>
+            </div>
+             <div class="col-lg-6 bg-danger">
+                <h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore obcaecati rerum molestiae recusandae fugiat cupiditate?</h4>
+            </div>
+        </div>
     </div>
 </body>
 </html>
